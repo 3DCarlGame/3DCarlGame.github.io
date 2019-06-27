@@ -1,0 +1,31 @@
+/* Created by Pedro H.J */
+
+*{
+    outline:none;
+}
+
+#botao{
+    height:50px;
+    width:50px;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    background: tomato;
+}
+
+#botao2{
+    height:40px;
+    width:50px;
+    color: white;
+    text-align: center;
+    background: tomato;
+}
+
+#fonte1{
+    color: white;
+    border-radius: 5px;
+    padding:3px;
+    background: black;
+    text-align: center;
+      font-size: 20px;
+}
