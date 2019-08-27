@@ -1,141 +1,169 @@
 body{
- background-image: url("https://static-eu.insales.ru/images/products/1/1136/211829872/Savage_V01_0507_5_x_7_Infinity_679301.jpg");
+ background-image: url("../img/ep_naturalwhite.png");
 }
-.dws-button *{
+header{
+ /*margin-top: 200px;*/
+ font-family: Cuprum, Arial, Helvetica, sans-serif;
+}
+.dws-menu *{
  margin: 0;
  padding: 0;
 }
-.dws-button{
- font-family: Cuprum, Arial, Verdana, sans-serif;
- width: 250px;
- height: 70px;
- margin: 50px auto;
+.dws-menu ul,
+.dws-menu ol{
+ list-style: none;
+}
+.dws-menu > ul{
+ display: flex;
+ justify-content: center;
+}
+.dws-menu > ul li{
+ position: relative;
+ border-right: 1px solid #c7c8ca;
+}
+.dws-menu > ul li:first-child{
+ border-left: 1px solid #b2b3b5;
+}
+.dws-menu > ul li:last-child{
+ border-right: 1px solid #babbbd;
+}
+.dws-menu > ul li > a i.fa{
+ position: absolute;
+ top: 15px;
+ left: 12px;
+ font-size: 18px;
+}
+.dws-menu > ul li a{
+ display: block;
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c9c9+0,f6f6f6+2,c4c5c7+98,757577+100;Custom+3 */
+ background: rgb(201,201,201); /* Old browsers */
+ background: -moz-linear-gradient(top,  rgba(201,201,201,1) 0%, rgba(246,246,246,1) 2%, rgba(196,197,199,1) 98%, rgba(117,117,119,1) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#757577',GradientType=0 ); /* IE6-9 */
+
+ padding: 15px 30px 15px 40px;
+ font-size: 14px;
+ color: #454547;
+ text-decoration: none;
+ text-transform:uppercase;
+ transition: all 0.3s ease;
+}
+.dws-menu li a:hover{
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e1e5+0,454547+2,454547+98,e0e1e5+100 */
+ background: rgb(224,225,229); /* Old browsers */
+ background: -moz-linear-gradient(top,  rgba(224,225,229,1) 0%, rgba(69,69,71,1) 2%, rgba(69,69,71,1) 98%, rgba(224,225,229,1) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e1e5', endColorstr='#e0e1e5',GradientType=0 ); /* IE6-9 */
+
+ color: #ffffff;
+ box-shadow: 1px 5px 10px -5px black;
+ transition: all 0.3s ease;
+}
+
+/*sub menu*/
+.dws-menu li ul{
+ position: absolute;
+ min-width: 150px;
+ display: none;
+}
+.dws-menu li > ul li{
+ border: 1px solid #c7c8ca;
+}
+.dws-menu li > ul li a{
+ padding: 10px;
+ text-transform: none;
+ background: #e4e4e5;
+}
+.dws-menu li > ul li ul{
+ position: absolute;
+ right: -150px;
+ top: 0;
+}
+.dws-menu li:hover > ul{
+ display: block;
+}
+
+/*==== MEDIA ====*/
+.dws-menu [type="checkbox"],
+.dws-menu label.toggleSubmenu{
+ display: none;
+}
+.dws-menu label.toggleMenu{
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c9c9+0,f6f6f6+2,c4c5c7+98,757577+100;Custom+3 */
+ background: rgb(201,201,201); /* Old browsers */
+ background: -moz-linear-gradient(top,  rgba(201,201,201,1) 0%, rgba(246,246,246,1) 2%, rgba(196,197,199,1) 98%, rgba(117,117,119,1) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#757577',GradientType=0 ); /* IE6-9 */
+
+ display: none;
+ padding: 15px 40px;
+ text-transform: uppercase;
+ font-size: 14px;
+ cursor: pointer;
  position: relative;
 }
-.b-demo, .b-text, .b-img, .b-demo:before, .b-img:after{
+
+.dws-menu label.toggleMenu .fa{
  position: absolute;
- transition:all 1.5s;
+ top: 15px;
+ left: 12px;
+ font-size: 18px;
 }
-.dws-button a{
- text-decoration: none;
- color: #ffffff;
+@media all and (max-width: 800px){
+ .dws-menu{
+  overflow: hidden;
+ }
+ .dws-menu ul{
+  display: block;
+  max-height: 0;
+  transition: max-height 0.3s;
+ }
+ .dws-menu li>ul li ul{
+  position: absolute;
+  right: auto;
+  top: auto;
+ }
+ .dws-menu label.toggleMenu{
+  display: block;
+ }
+ input.toggleMenu:checked + label.toggleMenu{
+  background: #000;
+  color: #fff;
+ }
+ input.toggleMenu:checked ~ ul,
+ input.toggleSubmenu:checked ~ ul{
+  display: block;
+  position: relative;
+  max-height: 5000px;
+  transition: max-height 2s ease-in;
+ }
+ .dws-menu label.toggleSubmenu{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+ }
+ input.toggleSubmenu:checked ~ a{
+  background: #454547;
+  color: #fff;
+ }
+ .dws-menu label.toggleSubmenu .fa:before{
+  content: "\f0d7";
+  color: #454547;
+ }
+ .dws-menu label.toggleSubmenu .fa{
+  position: absolute;
+  top: 15px;
+  right: 30px;
+ }
+ .dws-menu input.toggleSubmenu:checked ~ label.toggleSubmenu .fa::before{
+  content: "\f0d8";
+  color: #ffffff;
+ }
 }
-.b-demo, .b-img{
- /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f22404+13,8e0b00+65,6d0019+100 */
- background: rgb(242,36,4); /* Old browsers */
- background: -moz-linear-gradient(-45deg,  rgb(242,36,4) 13%, rgb(142,11,0) 65%, rgb(109,0,25) 100%); /* FF3.6-15 */
- background: -webkit-linear-gradient(-45deg,  rgb(242,36,4) 13%,rgb(142,11,0) 65%,rgb(109,0,25) 100%); /* Chrome10-25,Safari5.1-6 */
- background: linear-gradient(135deg,  rgb(242,36,4) 13%,rgb(142,11,0) 65%,rgb(109,0,25) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f22404', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-.b-demo{
- width: 105px;
- line-height: 70px;
- text-align: center;
- font-size: 30px;
- text-transform: uppercase;
- padding: 0 10px 0 15px;
- left: 0;
- top: 0;
- z-index:10;
- border-radius: 10px 0 0 10px;
- text-shadow: -1px -1px 1px #000000;
-}
-.b-text{
- /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50;Custom+2 */
- background: rgb(179,220,237); /* Old browsers */
- background: -moz-linear-gradient(45deg,  rgb(179,220,237) 0%, rgb(41,184,229) 50%); /* FF3.6-15 */
- background: -webkit-linear-gradient(45deg,  rgb(179,220,237) 0%,rgb(41,184,229) 50%); /* Chrome10-25,Safari5.1-6 */
- background: linear-gradient(45deg,  rgb(179,220,237) 0%,rgb(41,184,229) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#29b8e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
- color: #ffffff;
- font-size: 24px;
- width: 150px;
- line-height: 20px;
- text-align: center;
- padding: 10px 0 10px 10px;
- left: 5px;
- top: 5px;
-}
-.b-img{
- width: 45px;
- line-height: 45px;
- padding: 20px 0 0 20px;
- left: 140px;
- top: 0;
- border-radius: 0 10px 10px 0;
-}
-.b-demo:before{
- content: '';
- width: 0;
- height: 0;
- border-top: 35px solid transparent;
- border-left: 10px solid #7b040e;
- border-bottom: 35px solid transparent;
- top: 0;
- left: 129px;
-}
-.b-img:after{
- content: '';
- width: 0;
- height: 0;
- border-top: 35px solid transparent;
- border-left: 10px solid #29b8e5;
- border-bottom: 35px solid transparent;
- top: 0;
- left: 0;
-}
-
-/* Animation :hover */
-.dws-button a:hover .b-demo,
-.dws-button a:hover .b-demo:before,
-.dws-button a:hover .b-text,
-.dws-button a:hover .b-img,
-.dws-button a:hover .b-img:after{
- transition: all 0.5s;
-}
-.dws-button a:hover .b-demo{
- width: 50px;
- padding: 0 10px 0 10px;
- font-size: 20px;
-}
-.dws-button a:hover .b-demo:before{
- left: 69px;
-}
-.dws-button a:hover .b-img{
- left:185px;
-}
-.dws-button a:hover .b-text{
- left: 50px;
-}
-.b-img img{
- transition: all 1.5s;
-}
-.dws-button a:hover img{
- transform: rotate(360deg);
- opacity: 0.5;
-}
-
-/* Animation :active */
-.dws-button a:active .b-demo,
-.dws-button a:active .b-img{
- /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f22404+13,8e0b00+49,6d0019+70 */
- background: rgb(242,36,4); /* Old browsers */
- background: -moz-linear-gradient(45deg,  rgb(242,36,4) 13%, rgb(142,11,0) 49%, rgb(109,0,25) 70%); /* FF3.6-15 */
- background: -webkit-linear-gradient(45deg,  rgb(242,36,4) 13%,rgb(142,11,0) 49%,rgb(109,0,25) 70%); /* Chrome10-25,Safari5.1-6 */
- background: linear-gradient(45deg,  rgb(242,36,4) 13%,rgb(142,11,0) 49%,rgb(109,0,25) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f22404', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-.dws-button a:active .b-text{
- /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50 */
- background: rgb(179,220,237); /* Old browsers */
- background: -moz-linear-gradient(-45deg,  rgb(179,220,237) 0%, rgb(41,184,229) 50%); /* FF3.6-15 */
- background: -webkit-linear-gradient(-45deg,  rgb(179,220,237) 0%,rgb(41,184,229) 50%); /* Chrome10-25,Safari5.1-6 */
- background: linear-gradient(135deg,  rgb(179,220,237) 0%,rgb(41,184,229) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#29b8e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
- box-shadow: 0 0 3px 1px #82dcff;
-}
-.dws-button a:active img{
- transform: rotate(0deg);
- opacity: 1;
